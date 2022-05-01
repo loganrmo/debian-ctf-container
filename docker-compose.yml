@@ -8,6 +8,4 @@ services:
     tty: true
     entrypoint: /bin/bash
     volumes:
-      - ${LOCALPATH}:/home/rm/workspace
-
-volumes:
+      - ${LOCALPATH}:/home/workspace
