@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  container:
+    build: .
+    container_name: debian-ctf
+    hostname: debian-ctf
+    tty: true
+    entrypoint: /bin/bash
+    volumes:
+      - ${LOCALPATH}:/home/rm/workspace
+
+volumes:
