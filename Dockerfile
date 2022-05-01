@@ -43,7 +43,6 @@ RUN pip install pypykatz pwntools
 RUN useradd -rm -d /home/${USERNAME} -s /bin/bash -G sudo -u 1001 -p JkqZWdvHiO44w ${USERNAME}
 RUN chown -R ${USERNAME} /home/${USERNAME}
 
-
 WORKDIR /home/${USERNAME}
 RUN git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap
 RUN git clone https://github.com/openwall/john -b bleeding-jumbo john && cd john/src && ./configure && make -s clean && make -sj4
